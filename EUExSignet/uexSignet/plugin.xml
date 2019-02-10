@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<uexplugins>
+    <plugin name="uexSignet">
+        <method name="findBackUser"/>
+        <method name="userLogin"/>
+        <method name="getUserList"/>
+        <method name="clearCert"/>
+    </plugin>
+</uexplugins>

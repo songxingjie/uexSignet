@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ServiceURL</key>
+	<string>http://beta.isignet.cn:8080</string>
+	<key>FaceAuthCode</key>
+	<string>MDAxMDE1bm9kZXZpY2Vjd2F1dGhvcml6ZZ/n5+Xl5+bq3+bg5efm5Of+5uXl4Obg5Yjm5uvl5ubrkeXm5uvl5uai6+Xm5uvl5uTm6+Xm5uDm6uvn6+fr5+DV5+vn6+fr5/Xn5ubm5uc=</string>
+</dict>
+</plist>

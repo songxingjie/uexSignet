@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E87B83FB2204089D00D3BF43 /* EUExSignet.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B83FA2204089D00D3BF43 /* EUExSignet.m */; };
+		E87B84202204143C00D3BF43 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84182204141A00D3BF43 /* libzlib.a */; };
+		E87B84212204143F00D3BF43 /* libSignet-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84172204141A00D3BF43 /* libSignet-SDK.a */; };
+		E87B84222204144100D3BF43 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84162204141A00D3BF43 /* libcrypto.a */; };
+		E87B84232204144300D3BF43 /* libBJCAAnySignCodeScan-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84152204141A00D3BF43 /* libBJCAAnySignCodeScan-SDK.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E87B83F62204089D00D3BF43 /* libuexSignet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexSignet.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E87B83F92204089D00D3BF43 /* EUExSignet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExSignet.h; sourceTree = "<group>"; };
+		E87B83FA2204089D00D3BF43 /* EUExSignet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExSignet.m; sourceTree = "<group>"; };
+		E87B84042204138500D3BF43 /* AppCanKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppCanKit.framework; sourceTree = "<group>"; };
+		E87B84152204141A00D3BF43 /* libBJCAAnySignCodeScan-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libBJCAAnySignCodeScan-SDK.a"; sourceTree = "<group>"; };
+		E87B84162204141A00D3BF43 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		E87B84172204141A00D3BF43 /* libSignet-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSignet-SDK.a"; sourceTree = "<group>"; };
+		E87B84182204141A00D3BF43 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzlib.a; sourceTree = "<group>"; };
+		E87B841A2204141A00D3BF43 /* BJCAAnySignCodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BJCAAnySignCodeScan.bundle; sourceTree = "<group>"; };
+		E87B841B2204141A00D3BF43 /* BJCASignetService.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BJCASignetService.plist; sourceTree = "<group>"; };
+		E87B841C2204141A00D3BF43 /* Signet-SDK-Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Signet-SDK-Bundle.bundle"; sourceTree = "<group>"; };
+		E87B841E2204141A00D3BF43 /* SignetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignetManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E87B83F32204089D00D3BF43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87B84232204144300D3BF43 /* libBJCAAnySignCodeScan-SDK.a in Frameworks */,
+				E87B84222204144100D3BF43 /* libcrypto.a in Frameworks */,
+				E87B84212204143F00D3BF43 /* libSignet-SDK.a in Frameworks */,
+				E87B84202204143C00D3BF43 /* libzlib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8799B5B22108865004DA235 /* SourceCode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SourceCode;
+			sourceTree = "<group>";
+		};
+		E87B83ED2204089D00D3BF43 = {
+			isa = PBXGroup;
+			children = (
+				E87B841D2204141A00D3BF43 /* Header */,
+				E87B84142204141A00D3BF43 /* Lib */,
+				E87B84192204141A00D3BF43 /* Resource */,
+				E87B84032204138500D3BF43 /* EngineFrameworks */,
+				E87B83F82204089D00D3BF43 /* EUExSignet */,
+				E87B83F72204089D00D3BF43 /* Products */,
+				E87B841F2204143C00D3BF43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E87B83F72204089D00D3BF43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E87B83F62204089D00D3BF43 /* libuexSignet.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E87B83F82204089D00D3BF43 /* EUExSignet */ = {
+			isa = PBXGroup;
+			children = (
+				E8799B5B22108865004DA235 /* SourceCode */,
+				E87B83F92204089D00D3BF43 /* EUExSignet.h */,
+				E87B83FA2204089D00D3BF43 /* EUExSignet.m */,
+			);
+			path = EUExSignet;
+			sourceTree = "<group>";
+		};
+		E87B84032204138500D3BF43 /* EngineFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87B84042204138500D3BF43 /* AppCanKit.framework */,
+			);
+			name = EngineFrameworks;
+			path = EUExSignet/EngineFrameworks;
+			sourceTree = "<group>";
+		};
+		E87B84142204141A00D3BF43 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				E87B84152204141A00D3BF43 /* libBJCAAnySignCodeScan-SDK.a */,
+				E87B84162204141A00D3BF43 /* libcrypto.a */,
+				E87B84172204141A00D3BF43 /* libSignet-SDK.a */,
+				E87B84182204141A00D3BF43 /* libzlib.a */,
+			);
+			name = Lib;
+			path = EUExSignet/SignetSDK/Lib;
+			sourceTree = "<group>";
+		};
+		E87B84192204141A00D3BF43 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E87B841A2204141A00D3BF43 /* BJCAAnySignCodeScan.bundle */,
+				E87B841B2204141A00D3BF43 /* BJCASignetService.plist */,
+				E87B841C2204141A00D3BF43 /* Signet-SDK-Bundle.bundle */,
+			);
+			name = Resource;
+			path = EUExSignet/SignetSDK/Resource;
+			sourceTree = "<group>";
+		};
+		E87B841D2204141A00D3BF43 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				E87B841E2204141A00D3BF43 /* SignetManager.h */,
+			);
+			name = Header;
+			path = EUExSignet/SignetSDK/Header;
+			sourceTree = "<group>";
+		};
+		E87B841F2204143C00D3BF43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E87B83F52204089D00D3BF43 /* EUExSignet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E87B83FF2204089D00D3BF43 /* Build configuration list for PBXNativeTarget "EUExSignet" */;
+			buildPhases = (
+				E87B83F22204089D00D3BF43 /* Sources */,
+				E87B83F32204089D00D3BF43 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EUExSignet;
+			productName = EUExSignet;
+			productReference = E87B83F62204089D00D3BF43 /* libuexSignet.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E87B83EE2204089D00D3BF43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "张一鹏";
+				TargetAttributes = {
+					E87B83F52204089D00D3BF43 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+				};
+			};
+			buildConfigurationList = E87B83F12204089D00D3BF43 /* Build configuration list for PBXProject "EUExSignet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E87B83ED2204089D00D3BF43;
+			productRefGroup = E87B83F72204089D00D3BF43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E87B83F52204089D00D3BF43 /* EUExSignet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E87B83F22204089D00D3BF43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E87B83FB2204089D00D3BF43 /* EUExSignet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E87B83FD2204089D00D3BF43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E87B83FE2204089D00D3BF43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E87B84002204089D00D3BF43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = $SRCROOT/uexSignet;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EUExSignet/EngineFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExSignet/Lib",
+					"$(PROJECT_DIR)/EUExSignet/SignetSDK/Lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexSignet;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E87B84012204089D00D3BF43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = $SRCROOT/uexSignet;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/EUExSignet/EngineFrameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EUExSignet/Lib",
+					"$(PROJECT_DIR)/EUExSignet/SignetSDK/Lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = uexSignet;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E87B83F12204089D00D3BF43 /* Build configuration list for PBXProject "EUExSignet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87B83FD2204089D00D3BF43 /* Debug */,
+				E87B83FE2204089D00D3BF43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E87B83FF2204089D00D3BF43 /* Build configuration list for PBXNativeTarget "EUExSignet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E87B84002204089D00D3BF43 /* Debug */,
+				E87B84012204089D00D3BF43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E87B83EE2204089D00D3BF43 /* Project object */;
+}
