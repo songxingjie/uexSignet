@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0A830B522155DAF007BC15B /* libBJCAAnySignCodeScan-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84152204141A00D3BF43 /* libBJCAAnySignCodeScan-SDK.a */; };
+		B0A830B622155DAF007BC15B /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84162204141A00D3BF43 /* libcrypto.a */; };
+		B0A830B722155DAF007BC15B /* libSignet-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84172204141A00D3BF43 /* libSignet-SDK.a */; };
+		B0A830B822155DAF007BC15B /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84182204141A00D3BF43 /* libzlib.a */; };
 		E87B83FB2204089D00D3BF43 /* EUExSignet.m in Sources */ = {isa = PBXBuildFile; fileRef = E87B83FA2204089D00D3BF43 /* EUExSignet.m */; };
-		E87B84202204143C00D3BF43 /* libzlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84182204141A00D3BF43 /* libzlib.a */; };
-		E87B84212204143F00D3BF43 /* libSignet-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84172204141A00D3BF43 /* libSignet-SDK.a */; };
-		E87B84222204144100D3BF43 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84162204141A00D3BF43 /* libcrypto.a */; };
-		E87B84232204144300D3BF43 /* libBJCAAnySignCodeScan-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E87B84152204141A00D3BF43 /* libBJCAAnySignCodeScan-SDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B03BCCF82216CFCE00898439 /* BJCASignetService.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BJCASignetService.plist; sourceTree = "<group>"; };
 		E87B83F62204089D00D3BF43 /* libuexSignet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libuexSignet.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87B83F92204089D00D3BF43 /* EUExSignet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EUExSignet.h; sourceTree = "<group>"; };
 		E87B83FA2204089D00D3BF43 /* EUExSignet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EUExSignet.m; sourceTree = "<group>"; };
@@ -24,7 +25,6 @@
 		E87B84172204141A00D3BF43 /* libSignet-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSignet-SDK.a"; sourceTree = "<group>"; };
 		E87B84182204141A00D3BF43 /* libzlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzlib.a; sourceTree = "<group>"; };
 		E87B841A2204141A00D3BF43 /* BJCAAnySignCodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BJCAAnySignCodeScan.bundle; sourceTree = "<group>"; };
-		E87B841B2204141A00D3BF43 /* BJCASignetService.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BJCASignetService.plist; sourceTree = "<group>"; };
 		E87B841C2204141A00D3BF43 /* Signet-SDK-Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "Signet-SDK-Bundle.bundle"; sourceTree = "<group>"; };
 		E87B841E2204141A00D3BF43 /* SignetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignetManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -34,10 +34,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E87B84232204144300D3BF43 /* libBJCAAnySignCodeScan-SDK.a in Frameworks */,
-				E87B84222204144100D3BF43 /* libcrypto.a in Frameworks */,
-				E87B84212204143F00D3BF43 /* libSignet-SDK.a in Frameworks */,
-				E87B84202204143C00D3BF43 /* libzlib.a in Frameworks */,
+				B0A830B522155DAF007BC15B /* libBJCAAnySignCodeScan-SDK.a in Frameworks */,
+				B0A830B622155DAF007BC15B /* libcrypto.a in Frameworks */,
+				B0A830B722155DAF007BC15B /* libSignet-SDK.a in Frameworks */,
+				B0A830B822155DAF007BC15B /* libzlib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,8 +106,8 @@
 		E87B84192204141A00D3BF43 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				B03BCCF82216CFCE00898439 /* BJCASignetService.plist */,
 				E87B841A2204141A00D3BF43 /* BJCAAnySignCodeScan.bundle */,
-				E87B841B2204141A00D3BF43 /* BJCASignetService.plist */,
 				E87B841C2204141A00D3BF43 /* Signet-SDK-Bundle.bundle */,
 			);
 			name = Resource;
@@ -307,6 +307,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = $SRCROOT/uexSignet;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/EUExSignet/EngineFrameworks",
@@ -316,6 +317,7 @@
 					"$(PROJECT_DIR)/EUExSignet/Lib",
 					"$(PROJECT_DIR)/EUExSignet/SignetSDK/Lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexSignet;
 				SKIP_INSTALL = YES;
@@ -328,6 +330,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CONFIGURATION_BUILD_DIR = $SRCROOT/uexSignet;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/EUExSignet/EngineFrameworks",
@@ -337,6 +340,7 @@
 					"$(PROJECT_DIR)/EUExSignet/Lib",
 					"$(PROJECT_DIR)/EUExSignet/SignetSDK/Lib",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = uexSignet;
 				SKIP_INSTALL = YES;
