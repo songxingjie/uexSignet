@@ -28,8 +28,8 @@ Ca云签名-登录插件
 
 **说明:**
 
-找回用户功能
-
+找回用户功能,该方法分为两种情况，分别为：手动修改测试代码(参数不为空时，调用SDK方法找回) 和 自带界面的找回证书（当参数传空，会调用SDK的方法用于启动界面）
+1.1  当参数不为空时：
 **参数:**
 
 | 参数名称    | 参数类型   | 是否必选 | 说明                                       |
@@ -42,42 +42,33 @@ Ca云签名-登录插件
 **示例:**
 
 ```javascript
-   function findBackUser() {
-            var jsonData = {
-                userName:"测试用户",
-                idCardNumber:"210624200001017496",
-                idCardType:1,
-            }
-            // idCardType取值：
-            //0 HK,
-            //1 HZ,
-            //2 JG,
-            //3 JI,
-            //4 JL,
-            //5 SB,
-            //6 SF,
-            //7 SG,
-            //8 WZ,
-            //9 XJ,
-            //10 GA;
-            uexSignet.findBackUser(JSON.stringify(jsonData), function(result){
-                alert(JSON.stringify("findBackUser: " + result));
-                console.log(JSON.stringify("findBackUser: " + result));
-            });
-        }```
-### 🍭 findBackUserWithInputUI 自带界面的找回证书，参数传空，会调用SDK的方法用于启动界面
-
-` uexSignet.findBackUser(JSON.stringify(jsonData), function(result){
-                alert(JSON.stringify("findBackUser: " + result));
-                console.log(JSON.stringify("findBackUser: " + result));
-            });`
-
-**说明:**
-
-自带界面的找回证书功能，无需传参数，会调用SDK方法启动界面
-
+function findBackUser() {
+    var jsonData = {
+        userName:"测试用户",
+        idCardNumber:"210624200001017496",
+        idCardType:1,
+    }
+    // idCardType取值：
+    //0 HK,
+    //1 HZ,
+    //2 JG,
+    //3 JI,
+    //4 JL,
+    //5 SB,
+    //6 SF,
+    //7 SG,
+    //8 WZ,
+    //9 XJ,
+    //10 GA;
+    uexSignet.findBackUser(JSON.stringify(jsonData), function(result){
+        alert(JSON.stringify("findBackUser: " + result));
+        console.log(JSON.stringify("findBackUser: " + result));
+    });
+}
+```
+1.2  当参数为空时：       
 **参数:**
-
+        
 | 参数名称    | 参数类型   | 是否必选 | 说明                                       |
 | ------- | ------ | ---- | ---------------------------------------- |
 | result    | Function    |   是      |  用于调用SDK找回用户API找回用户返回信息,将调用此回调函数  |
@@ -86,14 +77,15 @@ Ca云签名-登录插件
 **示例:**
 
 ```javascript
-    function findBackUserWithInputUI() {
-            var jsonData = {}
-            uexSignet.findBackUser(JSON.stringify(jsonData), function(result){
-                alert(JSON.stringify("findBackUser: " + result));
-                console.log(JSON.stringify("findBackUser: " + result));
-            });
-        }```
-
+function findBackUserWithInputUI() {
+var jsonData = {}
+uexSignet.findBackUser(JSON.stringify(jsonData), function(result){
+alert(JSON.stringify("findBackUser: " + result));
+console.log(JSON.stringify("findBackUser: " + result));
+});
+}
+```      
+        
 ### 🍭 userLogin 用户登录：通过EMM登录后，后端返回的msspId和signId等信息
 ` uexSignet.userLogin(JSON.stringify(jsonData), function(result){
                 alert(JSON.stringify("userLogin: " + result));
@@ -118,16 +110,17 @@ Ca云签名-登录插件
 **示例:**
 
 ```javascript
-    function userLogin() {
-            var jsonData = {
-                msspId:"123456",
-                signId:"123456",
-            }
-            uexSignet.userLogin(JSON.stringify(jsonData), function(result){
-                alert(JSON.stringify("userLogin: " + result));
-                console.log(JSON.stringify("userLogin: " + result));
-            });
-        }```
+function userLogin() {
+    var jsonData = {
+        msspId:"123456",
+        signId:"123456",
+    }
+    uexSignet.userLogin(JSON.stringify(jsonData), function(result){
+        alert(JSON.stringify("userLogin: " + result));
+        console.log(JSON.stringify("userLogin: " + result));
+    });
+}
+```
 
 
 ### 🍭 getUserList 获取本地所有已经存储好了的证书（可用证书），用于检查本地是否存在证书，是否还需要调用findBackUser接口
@@ -150,11 +143,12 @@ VALUE分别为msspID与其对应的用户名。应用情景为登录App时选择
 **示例:**
 
 ```javascript
-     function getUserList() {
-            var result = uexSignet.getUserList();
-            alert(JSON.stringify("getUserList: " + result));
-            console.log(JSON.stringify("getUserList: " + result));
-        }```
+function getUserList() {
+    var result = uexSignet.getUserList();
+    alert(JSON.stringify("getUserList: " + result));
+    console.log(JSON.stringify("getUserList: " + result));
+}
+```
 
 ### 🍭 clearCert 清空本地证书存储，按需求调用（比如注销时，是否需要清空证书？）
 `  var result = uexSignet.clearCert(JSON.stringify(jsonData));
@@ -176,25 +170,25 @@ VALUE分别为msspID与其对应的用户名。应用情景为登录App时选择
 **示例:**
 
 ```javascript
-    function clearCert() {
-            var jsonData = {
-                msspId:"123456",
-                certType:"123456",
-            }
-            // certType取值：
-            //0 ALL_CERT,
-            //1 RSA_SIGN_CERT,
-            //2 RSA_AUTH_CERT,
-            //3 SM2_SIGN_CERT,
-            //4 SM2_AUTH_CERT,
-            //5 ALL_OFFLINE_CERT,
-            //6 RSA_OFFLINE_SIGN_CERT,
-            //7 SM2_OFFLINE_SIGN_CERT;
-            var result = uexSignet.clearCert(JSON.stringify(jsonData));
-            alert(JSON.stringify("getUserList: " + result));
-            console.log(JSON.stringify("getUserList: " + result));
-        }```
-
+function clearCert() {
+    var jsonData = {
+        msspId:"123456",
+        certType:"123456",
+    }
+    // certType取值：
+    //0 ALL_CERT,
+    //1 RSA_SIGN_CERT,
+    //2 RSA_AUTH_CERT,
+    //3 SM2_SIGN_CERT,
+    //4 SM2_AUTH_CERT,
+    //5 ALL_OFFLINE_CERT,
+    //6 RSA_OFFLINE_SIGN_CERT,
+    //7 SM2_OFFLINE_SIGN_CERT;
+    var result = uexSignet.clearCert(JSON.stringify(jsonData));
+    alert(JSON.stringify("getUserList: " + result));
+    console.log(JSON.stringify("getUserList: " + result));
+}
+```
 
 # 3、更新历史
 
