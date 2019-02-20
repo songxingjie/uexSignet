@@ -101,7 +101,7 @@
                 NSLog(@"dict%@",dict);
                 NSLog(@"the sign Cert:%@", [msspInfo objectForKey:@"SignCert"] );
                 [resultDict setValue:[msspInfo objectForKey:@"SignJobID"] forKey:@"SignDataJobID"];
-                [resultDict setValue:[msspInfo objectForKey:@"SignCert"] forKey:@"Cert"];
+                [resultDict setValue:[msspInfo objectForKey:@"SignCert"] forKey:@"cert"];
                 [_userLoginCallbackFunc executeWithArguments:@[[resultDict ac_JSONFragment]]];
             }
         }
@@ -134,6 +134,7 @@
     NSString *msspId = stringArg(info[@"msspId"]);
     NSString *signId = stringArg(info[@"signId"]);
     NSError *error =  [_mySignet userLogin:APP_ID MSSPID:msspId LogInJobID:signId];
+    ACLogDebug(@"->uexSignet ---> findBackUser error %@ \n",error);
     if ( error != nil ) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:[error localizedDescription]preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
