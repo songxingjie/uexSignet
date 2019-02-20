@@ -10,7 +10,7 @@
 #import "SignetSDK/Header/SignetManager.h"
 
 //调用者的应用编号
-#define APP_ID                     @"APP_DC757944A56B4D67A96B0BAC38F4B1A8"
+#define APP_ID                     @"APP_DD4E6AC3F72342D49880F7D4074340A6"
 
 @interface EUExSignet()<SignetManagerDelegate>
 
