@@ -100,7 +100,7 @@
                 }
                 NSLog(@"dict%@",dict);
                 NSLog(@"the sign Cert:%@", [msspInfo objectForKey:@"SignCert"] );
-                [resultDict setValue:[msspInfo objectForKey:@"SignJobID"] forKey:@"SignDataJobID"];
+                [resultDict setValue:[msspInfo objectForKey:@"SignJobID"] forKey:@"signDataJobID"];
                 [resultDict setValue:[msspInfo objectForKey:@"SignCert"] forKey:@"cert"];
                 [_userLoginCallbackFunc executeWithArguments:@[[resultDict ac_JSONFragment]]];
             }
@@ -112,17 +112,18 @@
         if (_findBackUserCallbackFunc) {
             if (![backParam[@"errorCode"] isEqualToString:@"0x00000000"]) {
                 [_findBackUserCallbackFunc executeWithArguments:@[[resultDict ac_JSONFragment]]];
+            }else if ([backParam[@"errorCode"] isEqualToString:@"0x11000001"]) {
+                 //点击左上角取消，关闭界面
+                [self.webViewEngine.viewController dismissViewControllerAnimated:YES completion:nil];
             }else {
                 NSString *msspID = (NSString*)backParam[@"backData"];
                 [resultDict setValue:msspID forKey:@"msspId"];
-                
                 [_findBackUserCallbackFunc executeWithArguments:@[[resultDict ac_JSONFragment]]];
             }
         }
     }else {
         return ;
     }
-    [self.webViewEngine.viewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)userLogin:(NSMutableArray *)inArguments{
@@ -134,7 +135,7 @@
     NSString *msspId = stringArg(info[@"msspId"]);
     NSString *signId = stringArg(info[@"signId"]);
     NSError *error =  [_mySignet userLogin:APP_ID MSSPID:msspId LogInJobID:signId];
-    ACLogDebug(@"->uexSignet ---> findBackUser error %@ \n",error);
+    ACLogDebug(@"->uexSignet ---> userLogin error %@ \n",error);
     if ( error != nil ) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:[error localizedDescription]preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
