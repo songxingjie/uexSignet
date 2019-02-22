@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <uexplugins>
     <plugin
-        uexName="uexSignet" version="4.0.0.5" build="2019020101">
-        <info>0.5:修改登录回调参数字段“Cert”为“cert”</info>
-        <info>0.3:测试环境</info>
-        <info>0:云签名SDK插件</info>
+        uexName="uexSignet" version="4.0.0.9" build="2019020101">
+        <info>0.9:测试环境，再次替换ca的测试包</info>
+        <build>0.7:测试环境，替换ca的测试包</build>
+        <build>0.5:修改登录回调参数字段“Cert”为“cert”</build>
+        <build>0.3:测试环境</build>
+        <build>0:云签名SDK插件</build>
     </plugin>
 </uexplugins>
